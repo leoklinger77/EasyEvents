@@ -4,7 +4,7 @@
 	using Microsoft.Extensions.DependencyInjection;
 
 	public static class EventInjector {
-		public static void AddEventOrchestrator(this IServiceCollection services) {
+		public static void AddEazyEvents(this IServiceCollection services) {
 			services.AddSingleton<EventQueue>();
 			services.AddHostedService<EventDispatcherWorker>();
 
