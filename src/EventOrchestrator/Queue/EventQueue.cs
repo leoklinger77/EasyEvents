@@ -1,5 +1,5 @@
-﻿namespace EventOrchestrator.Queue {
-	using EventOrchestrator.Events;
+﻿namespace EasyEvent.Queue {
+	using EasyEvent.Events;
 	using System.Threading.Channels;
 	public class EventQueue {
 		private readonly Channel<IQueue> _channel = Channel.CreateUnbounded<IQueue>();

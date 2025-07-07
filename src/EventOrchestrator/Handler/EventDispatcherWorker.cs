@@ -1,6 +1,6 @@
-﻿namespace EventOrchestrator.Handler {
-	using EventOrchestrator.Events;
-	using EventOrchestrator.Queue;
+﻿namespace EasyEvent.Handler {
+	using EasyEvent.Events;
+	using EasyEvent.Queue;
 	using Microsoft.Extensions.DependencyInjection;
 	using Microsoft.Extensions.Hosting;
 	using Microsoft.Extensions.Logging;

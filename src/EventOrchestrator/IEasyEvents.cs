@@ -1,6 +1,6 @@
-﻿namespace EventOrchestrator {
-	using EventOrchestrator.Events;
-	public interface IEazyEvents {
+﻿namespace EasyEvent {
+	using EasyEvent.Events;
+	public interface IEasyEvents {
 		Task<TResponse> SendCommandAsync<TCommand, TResponse>(TCommand command, CancellationToken cancellationToken = default)
 			where TCommand : IEvent;
 

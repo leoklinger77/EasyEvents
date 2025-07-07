@@ -1,14 +1,13 @@
-﻿namespace EventOrchestrator.DependencyInjector {
-	using EventOrchestrator.Handler;
-	using EventOrchestrator.Queue;
+﻿namespace EasyEvent.DependencyInjector {
+	using EasyEvent.Handler;
+	using EasyEvent.Queue;
 	using Microsoft.Extensions.DependencyInjection;
-
 	public static class EventInjector {
-		public static void AddEazyEvents(this IServiceCollection services) {
+		public static void AddEasyEvents(this IServiceCollection services) {
 			services.AddSingleton<EventQueue>();
 			services.AddHostedService<EventDispatcherWorker>();
 
-			services.AddScoped<IEazyEvents, EazyEvents>();
+			services.AddScoped<IEasyEvents, EazyEvents>();
 		}
 	}
 }

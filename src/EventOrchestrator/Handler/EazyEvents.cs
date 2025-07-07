@@ -1,10 +1,10 @@
-﻿namespace EventOrchestrator.Handler {
-	using EventOrchestrator.Events;
-	using EventOrchestrator.Queue;
+﻿namespace EasyEvent.Handler {
+	using EasyEvent.Events;
+	using EasyEvent.Queue;
 	using Microsoft.Extensions.DependencyInjection;
 	using Microsoft.Extensions.Logging;
 
-	public class EazyEvents : IEazyEvents {
+	public class EazyEvents : IEasyEvents {
 		private readonly ILogger<EazyEvents> _logger;
 		private readonly IServiceProvider _provider;
 		private readonly EventQueue _eventQueue;
