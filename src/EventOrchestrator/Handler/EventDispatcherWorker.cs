@@ -31,7 +31,7 @@
 
 					foreach (var handler in handlers) {
 						var method = handlerType.GetMethod(nameof(IQueueHandler<IQueue>.HandleAsync))!;
-						var task = (Task)method.Invoke(handler, [@event, scope, stoppingToken])!;
+						var task = (Task)method.Invoke(handler, [@event, scope.ServiceProvider, stoppingToken])!;
 						await task;
 					}
 				} catch (Exception ex) {

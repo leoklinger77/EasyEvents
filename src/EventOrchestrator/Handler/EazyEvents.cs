@@ -18,7 +18,7 @@
 		}
 
 		public async Task<TResponse> SendCommandAsync<TCommand, TResponse>(TCommand command, CancellationToken cancellationToken = default)
-			where TCommand : IEvent {
+			where TCommand : ICommand {
 			if (_logger.IsEnabled(LogLevel.Trace)) {
 				_logger.LogTrace($"[EazyEvents] Send command initialize {command.GetType().Name}");
 			}
