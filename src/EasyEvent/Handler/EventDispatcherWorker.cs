@@ -1,6 +1,6 @@
-﻿namespace EventOrchestrator.Handler {
-	using EventOrchestrator.Events;
-	using EventOrchestrator.Queue;
+﻿namespace EasyEvent.Handler {
+	using EasyEvent.Events;
+	using EasyEvent.Queue;
 	using Microsoft.Extensions.DependencyInjection;
 	using Microsoft.Extensions.Hosting;
 	using Microsoft.Extensions.Logging;
@@ -31,7 +31,7 @@
 
 					foreach (var handler in handlers) {
 						var method = handlerType.GetMethod(nameof(IQueueHandler<IQueue>.HandleAsync))!;
-						var task = (Task)method.Invoke(handler, [@event, scope, stoppingToken])!;
+						var task = (Task)method.Invoke(handler, [@event, scope.ServiceProvider, stoppingToken])!;
 						await task;
 					}
 				} catch (Exception ex) {
