@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventOrchestrator", "src\EventOrchestrator\EventOrchestrator.csproj", "{3220E539-4F2D-4367-AE67-2E16BD032808}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyEvent", "src\EasyEvent\EasyEvent.csproj", "{60FDC44E-6BE0-08BF-8160-5698CE6AE6B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3220E539-4F2D-4367-AE67-2E16BD032808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3220E539-4F2D-4367-AE67-2E16BD032808}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3220E539-4F2D-4367-AE67-2E16BD032808}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3220E539-4F2D-4367-AE67-2E16BD032808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FDC44E-6BE0-08BF-8160-5698CE6AE6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FDC44E-6BE0-08BF-8160-5698CE6AE6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FDC44E-6BE0-08BF-8160-5698CE6AE6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FDC44E-6BE0-08BF-8160-5698CE6AE6B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
