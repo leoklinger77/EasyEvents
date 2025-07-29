@@ -31,14 +31,15 @@ dotnet add package EasyEvents
 
 ### ⚙️ Como usar
 ## 1. Registre o serviço no Startup.cs ou Program.cs:
+# Simples injecao, configuracao default
 ```C#
-
-//Simples injecao, configuracao default
 services.AddEasyEvents();
+```
+## Customizacao da Queue
+# escolha entre Bounded ou Unbounded, nunca os dois juntos!
 
-//Customizacao da Queue
-
-// Ou escolha entre Bounded ou Unbounded, nunca os dois juntos!
+# Bounded
+```C#
 services.AddEasyEvents(options => {
     option.QueueBounded = new BoundedChannelOptions(100) {
         SingleReader = true,
@@ -47,8 +48,9 @@ services.AddEasyEvents(options => {
         FullMode = BoundedChannelFullMode.Wait
     };
 });
-
-// Unbounded 
+```
+# Unbounded 
+```C#
 services.AddEasyEvents(options => {    
     option.QueueUnbounded = new UnboundedChannelOptions {
         SingleReader = true,
@@ -57,7 +59,6 @@ services.AddEasyEvents(options => {
     };
 });
 ```
-
 ### 🧑‍💻 Uso dos eventos e comandos
 
 ## 🔄 Enviar um comando (com resposta)
@@ -105,7 +106,7 @@ await _easyEvents.PublishQueueAsync(new EmailNotificationEvent(...));
 ```
 
 ### 🧪 Testes e Contribuição
-Contribuições são muito bem-vindas para tornar o EasyEvents ainda melhor!
+# Contribuições são muito bem-vindas para tornar o EasyEvents ainda melhor!
 
 Se você encontrou um bug, deseja sugerir melhorias ou adicionar novas funcionalidades, siga os passos abaixo:
 
