@@ -3,7 +3,7 @@
     using System.Threading.Channels;
     public class EventQueue {
         private readonly Channel<IQueue> _channel;
-        public EventQueue(UnboundedChannelOptions? unboundedOptions = null) {
+        public EventQueue(UnboundedChannelOptions unboundedOptions = null) {
             _channel = Channel.CreateUnbounded<IQueue>(unboundedOptions ?? new UnboundedChannelOptions());
         }
 

@@ -1,3 +1,3 @@
 ﻿namespace EasyEvent.Events {
-	public interface ICommand { }
+    public interface ICommand { }
 }
